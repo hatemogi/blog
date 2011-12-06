@@ -1,0 +1,10 @@
+.page-header
+  %h2
+    %a(href="#{@article.identifier}")= @article[:title]
+    %small= @article[:created_at]
+= content_for(@article, :body)
+.well
+  - article_url = "http://hatemogi.com#{@article.identifier}"
+  -# %a.pull-left.twitter-share-button(href="https://twitter.com/share" data-url="#{article_url}" data-text="title" data-count="none") Tweet
+  .fb-like(data-href="#{article_url}" data-send="false" data-width="#{@width || 500}" data-show-faces="false")
+  .fb-comments(data-href="#{article_url}" data-num-posts="#{@posts || 2}" data-width="#{@width || 500}")
