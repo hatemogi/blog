@@ -44,11 +44,7 @@ route '/css/*' do
 end
 
 route '/js/*' do
-  if item[:extension] == 'coffee'
-    "#{item.identifier.chop}.js"
-  else
-    '/js/' + File.basename(item[:filename])
-  end
+  "#{item.identifier.chop}.js"
 end
 
 route '/img/*' do
