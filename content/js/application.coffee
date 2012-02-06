@@ -17,5 +17,6 @@ setup_facebook_js = ->
   js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1&appId=167741896656859"
   fjs.parentNode.insertBefore(js, fjs)
 
-$(setup_google_analytics)
-$(setup_facebook_js)
+unless window.location.hostname == '0.0.0.0'
+  $(setup_google_analytics)
+  $(setup_facebook_js)

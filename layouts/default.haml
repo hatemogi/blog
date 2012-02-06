@@ -1,7 +1,7 @@
 !!! 5
 %head
   %meta(charset='utf-8')
-  %title hatemogi.com#{item[:title] && ": #{item[:title]}" || ''}
+  %title= item[:title] || 'hatemogi.com'
   %script(src="/js/jquery-1.7.1.min.js" type="text/javascript")
   %script(src="/js/application.js" type="text/javascript")
   %script(src="/js/google-code-prettify/prettify.js" type="text/javascript")
@@ -9,6 +9,7 @@
   %link(rel="stylesheet" type="text/css" href="/css/bootstrap.min.css")
   %link(rel="stylesheet" type="text/css" href="/css/prettify.css")
   %link(rel="stylesheet" type="text/css" href="/css/hatemogi.css")
+  %link(rel="alternate" type="application/atom+xml" title="feed" href="#{site.config[:feed_url]}")
 %body(style="padding-top: 50px;")
   #fb-root
   .container
@@ -18,32 +19,36 @@
           .topbar-inner
             .container
               %a.brand(href="/") hatemogi.com
-              -# %ul.nav
-              -#   %li
-              -#     %a(href="/about/") about
-              -#   %li
-              -#     %a(href="/posts/") posts
-              -#   %li
-              -#     %a(href="/guestbook/") guestbook
+              %ul.nav
+                %li
+                  %a(href="/articles/") 글
+                -# %li
+                -#   %a(href="/guestbook/") 방명록
               %ul.secondary-nav
                 %li
+                  %a(href="http://twitter.com/hatemogi") @hatemogi
+                %li
                   %a(href="http://blog.hatemogi.com/") 이전블로그
-                %li
-                  -# %a(href="http://twitter.com/hatemogi") @hatemogi
-                %li
     %section#main-content
       - if item[:kind] == 'article'
         .row
-          .span10><
+          .span11><
             - content_for :body do
               ~ yield 
             ~ render 'article', :article => item, :width => 550
+          -# .span5><
+          -#   %ul.unstyled
+          -#     - sorted_articles.each do |a|
+          -#       %li
+          -#         %a(href="#{a.identifier}")= a[:title]
       - else
         .row
-          .span10>= yield
+          .span11>= yield
+          .span5.right
+
     %footer(style="padding-bottom: 20px'")
       .pull-right
-        Copyright © 2011 hatemogi
+        Copyright © 2011,2012 hatemogi
       %a.twitter-follow-button(href="https://twitter.com/hatemogi" data-show-count="false") Follow @hatemogi
     %script
       $(prettyPrint);

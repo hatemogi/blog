@@ -1,0 +1,10 @@
+---
+title: hatemogi.com 글목록
+---
+
+%ul.unstyled
+  - sorted_articles.each do |a|
+    %li
+      %h4
+        %a(href="#{a.identifier}")= a[:title]
+        %small= a[:created_at]

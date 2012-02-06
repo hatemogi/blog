@@ -14,6 +14,12 @@ output_dir: output
 # such as “default.htm”. This list is used by nanoc to generate pretty URLs.
 index_filenames: [ 'index.html' ]
 
+base_url: 'http://hatemogi.com'
+title: 'hatemogi.com'
+author_name: 'hatemogi'
+author_uri: '@hatemogi'
+feed_url: 'http://feeds.feedburner.com/hatemogi'
+
 # Whether or not to generate a diff of the compiled content when compiling a
 # site. The diff will contain the differences between the compiled content
 # before and after the last site compilation.

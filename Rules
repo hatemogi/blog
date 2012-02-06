@@ -25,6 +25,10 @@ compile '/js/*' do
   end
 end
 
+compile '/feed/' do
+  filter :erb
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -45,6 +49,10 @@ end
 
 route '/js/*' do
   "#{item.identifier.chop}.js"
+end
+
+route '/feed/' do
+  '/feed.xml'
 end
 
 route '/img/*' do
