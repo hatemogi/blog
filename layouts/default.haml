@@ -2,49 +2,50 @@
 %head
   %meta(charset='utf-8')
   %title= item[:title] || 'hatemogi.com'
-  %script(src="/js/jquery-1.7.1.min.js" type="text/javascript")
+  %script(src="/js/jquery.js" type="text/javascript")
   %script(src="/js/application.js" type="text/javascript")
   %script(src="/js/google-code-prettify/prettify.js" type="text/javascript")
+  %script(src="/js/bootstrap.js" type="text/javascript")
   %script(src="//platform.twitter.com/widgets.js")
-  %link(rel="stylesheet" type="text/css" href="/css/bootstrap.min.css")
+  %link(rel="stylesheet" type="text/css" href="/css/bootstrap.css")
+  %link(rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css")
   %link(rel="stylesheet" type="text/css" href="/css/prettify.css")
   %link(rel="stylesheet" type="text/css" href="/css/hatemogi.css")
   %link(rel="alternate" type="application/atom+xml" title="feed" href="#{site.config[:feed_url]}")
-%body(style="padding-top: 50px;")
+%body(style="padding-top: 10px;")
   #fb-root
   .container
     %section#navigation
-      .topbar-wrappper
-        .topbar
-          .topbar-inner
-            .container
-              %a.brand(href="/") hatemogi.com
-              %ul.nav
-                %li
-                  %a(href="/articles/") 글
-                -# %li
-                -#   %a(href="/guestbook/") 방명록
-              %ul.secondary-nav
-                %li
-                  %a(href="http://twitter.com/hatemogi") @hatemogi
-                %li
-                  %a(href="http://blog.hatemogi.com/") 이전블로그
+      .navbar
+        .navbar-inner
+          .container(style="width: auto;")
+            %a.brand(href="/") hatemogi.com
+            %ul.nav
+              %li
+                %a(href="/articles/") 글
+              -# %li
+              -#   %a(href="/guestbook/") 방명록
+            %ul.nav.pull-right
+              %li
+                %a(href="http://twitter.com/hatemogi") @hatemogi
+              %li
+                %a(href="http://blog.hatemogi.com/") 이전블로그
     %section#main-content
       - if item[:kind] == 'article'
         .row
-          .span11><
+          .span8><
             - content_for :body do
               ~ yield 
             ~ render 'article', :article => item, :width => 550
-          -# .span5><
+          -# .span4><
           -#   %ul.unstyled
           -#     - sorted_articles.each do |a|
           -#       %li
           -#         %a(href="#{a.identifier}")= a[:title]
       - else
         .row
-          .span11>= yield
-          .span5.right
+          .span8>= yield
+          .span4.right
 
     %footer(style="padding-bottom: 20px'")
       .pull-right

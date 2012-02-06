@@ -39,7 +39,7 @@ updated_at: 2012-02-01
 | Java        | Tomcat, Spring, Struts, iBatis, Velocity, JUnit, Ant |
 | C/C++ | Nginx 모듈 개발, Boost, TokyoCabinet, libevent |
 | 기타     |  Node.js, jQuery, Haml, Sass, iOS 모바일앱  |
-{: .zebra-striped}
+{: .table .table-striped}
 
 ## Projects @Daum
 * 2011, 사내 개발자용 github 서비스 개발 
