@@ -5,6 +5,10 @@
 = content_for(@article, :body)
 .well
   - article_url = "http://hatemogi.com#{@article.identifier}"
-  -# %a.pull-left.twitter-share-button(href="https://twitter.com/share" data-url="#{article_url}" data-text="title" data-count="none") Tweet
-  .fb-like(data-href="#{article_url}" data-send="false" data-width="#{@width || 500}" data-show-faces="false")
-  .fb-comments(data-href="#{article_url}" data-num-posts="#{@posts || 2}" data-width="#{@width || 500}")
+  .row
+    .span1
+      %a.twitter-share-button(href="https://twitter.com/share" data-url="#{article_url}" data-text="#{@article[:title]}") 트윗
+    .span1
+      .fb-like(data-href="#{article_url}" data-send="false" data-text="#{@article[:title]}" data-layout="button_count" data-width="#{@width || 500}" data-show-faces="false")
+
+  -# .fb-comments(data-href="#{article_url}" data-num-posts="#{@posts || 2}" data-width="#{@width || 500}")

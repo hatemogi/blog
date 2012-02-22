@@ -3,13 +3,20 @@ title: about
 created_at: 2012-01-06
 ---
 
-이 블로그는 개인적으로 관심있는 기술적 주제를 다루려고 합니다. 이제까지의 관심키워드를 나열해 봅니다. 아마도, 이하 키워드를 토대로, 이 블로그에 올라오는 내용을 어루어 짐작해보실 수 있을 것 같습니다.
+## about me
 
-> ruby, sinatra, eventmachine, git, github.com, node.js, express, erlang, riak, coffeescript, redis, aws, arm cortex-m3, stm32
+안녕하세요. 저는 다음커뮤니케이션에서 웹서비스 서버 개발자로 일하고 있는 hatemogi입니다. 직업이 웹서비스 개발쪽이라, 관련한 주제를 주로 소개하는 블로그가 될 것 같습니다. 하지만, 예전부터 컴퓨터 관련한 다양한 주제에 관심이 있었던 편이라, 다소 다양한 기술주제가 제멋대로 언급될 것 같습니다.
 
 혹시 저에게 개인적으로 남기실 말씀이 있으시거든, gmail, 페이스북 쪽지, 트위터 멘션등을 이용해주세요. 아이디(hatemogi)는 모두 같습니다. 
 그리고, 이 블로그의 내용은 저 개인의 의견일 뿐이며, 제가 다니는 회사의 공식적 입장이나 의견과 무관합니다. 
 
+## This blog is built with ...
 
+이 블로그는 다음의 도구를 사용해 만들었습니다. 
+
+* bootstrap
+* nanoc 
+* haml
+* coffeescript
 
 

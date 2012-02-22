@@ -1,8 +1,9 @@
 !!! 5
 %head
   %meta(charset='utf-8')
-  %title= item[:title] || 'hatemogi.com'
-  %script(src="/js/jquery.js" type="text/javascript")
+  %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  %title= (item[:title] && "웹개발의 재미: #{item[:title]}")|| '웹개발의 재미'
+  %script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript")
   %script(src="/js/application.js" type="text/javascript")
   %script(src="/js/google-code-prettify/prettify.js" type="text/javascript")
   %script(src="/js/bootstrap.js" type="text/javascript")
@@ -12,25 +13,29 @@
   %link(rel="stylesheet" type="text/css" href="/css/prettify.css")
   %link(rel="stylesheet" type="text/css" href="/css/hatemogi.css")
   %link(rel="alternate" type="application/atom+xml" title="feed" href="#{site.config[:feed_url]}")
-%body(style="padding-top: 10px;")
+%body
+  .navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        %a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.brand(href="/") hatemogi.com
+        .nav-collapse
+          %ul.nav
+            %li
+              %a(href="/articles/") 글
+            %li
+              %a(href="/guestbook/") 방명록
+          %ul.nav.pull-right
+            %li
+              %a(href="http://twitter.com/hatemogi") @hatemogi
+            %li
+              %a(href="http://blog.hatemogi.com/") 이전블로그
   #fb-root
-  .container
-    %section#navigation
-      .navbar
-        .navbar-inner
-          .container(style="width: auto;")
-            %a.brand(href="/") hatemogi.com
-            %ul.nav
-              %li
-                %a(href="/articles/") 글
-              -# %li
-              -#   %a(href="/guestbook/") 방명록
-            %ul.nav.pull-right
-              %li
-                %a(href="http://twitter.com/hatemogi") @hatemogi
-              %li
-                %a(href="http://blog.hatemogi.com/") 이전블로그
-    %section#main-content
+  %section#main-content(style="padding-top: 40px;")
+    .container
       - if item[:kind] == 'article'
         .row
           .span8><
@@ -47,9 +52,10 @@
           .span8>= yield
           .span4.right
 
-    %footer(style="padding-bottom: 20px'")
+  %footer(style="padding-bottom: 20px'")
+    .container
       .pull-right
-        Copyright © 2011,2012 hatemogi
-      %a.twitter-follow-button(href="https://twitter.com/hatemogi" data-show-count="false") Follow @hatemogi
-    %script
-      $(prettyPrint);
+        Copyright © 2012 hatemogi
+      %a.twitter-follow-button(href="https://twitter.com/hatemogi" data-show-count="false") Follow @hatemogi            
+  %script
+    $(prettyPrint);

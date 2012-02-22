@@ -16,7 +16,7 @@ created_at: 2012-01-09
 
 전시 때의 동영상도 찍어두었었는데, 어디로 갔는지 찾지를 못했습니다. 아래는, 추후에 집에서 촬영한 시연 동영상입니다.
 
-<object width="640" height="360"><param name="movie" value="http://www.youtube.com/v/KaR-PHZVWMM?version=3&amp;hl=ko_KR&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/KaR-PHZVWMM?version=3&amp;hl=ko_KR&amp;rel=0" type="application/x-shockwave-flash" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<object style="max-width: 560px; width: 100%; height: 315px;"><param name="movie" value="http://www.youtube.com/v/KaR-PHZVWMM?version=3&amp;hl=ko_KR&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/KaR-PHZVWMM?version=3&amp;hl=ko_KR&amp;rel=0" type="application/x-shockwave-flash" style="max-width: 560px; width: 100%; min-height:315px;" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
 (제 목소리를 녹음해서 들으니 꽤나 어색하군요)
 
@@ -48,6 +48,7 @@ created_at: 2012-01-09
 |클래스 1 | 100               | ~100m |
 |클래스 2 | 2.5                | ~10m   |
 |클래스 3 | 1                   | ~5m     |
+{: .table .table-striped}
 
 일반 컴퓨터로부터 가까이에서 쓰는 무선 키보드같은 장비는 클래스 3에 해당되겠죠. 이 프로젝트에서는 자동차의 이동 범위를 최대거리 30미터 정도로 예상하고, 클래스 1의 블루투스 통신 모듈을 구비했습니다.
 

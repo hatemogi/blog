@@ -2,6 +2,10 @@ code {
     background-color: transparent;
 }
 
+pre code {
+    border: none;
+}
+
 footer {
     border-top: 1px solid #efefef;
     padding: 20px;

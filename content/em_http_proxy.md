@@ -85,15 +85,12 @@ EventMachine::run {
 ruby가 설치된 환경에서, 우선 eventmachine gem을 설치합니다.
 ([rbenv](https://github.com/sstephenson/rbenv)나 [rvm](http://beginrescueend.com/)을 쓰신다면, sudo는 필요없습니다)
 
-~~~~
-sudo gem install eventmachine
-~~~~
+
+    sudo gem install eventmachine
 
 ruby와 eventmachine이 준비되었다면, 언제든 아래의 커맨드로 실행가능합니다.
 
-~~~~
-curl -s https://raw.github.com/hatemogi/em_http_proxy/master/proxy.rb | ruby
-~~~~
+    curl -s https://raw.github.com/hatemogi/em_http_proxy/master/proxy.rb | ruby
 
 이렇게 프록시 서버를 실행하면, 그 서버나 PC의 IP의 9000번 포트에 HTTP프록시 서버가 준비됩니다.
 
@@ -113,7 +110,7 @@ export http_proxy=http://192.168.0.0:9000/
 
 192.168.0.0부분을 게이트웨이 서버나 PC의 IP로 교체해서 설정하면 되는거죠.
 
-이상으로, 지극히 개발자적인 마인드로 HTTP서버를 구현해보았습니다. 
+이상으로, 지극히 개발자적인 마인드로 HTTP 프록시 서버를 구현해보았습니다. 
 
 
 
