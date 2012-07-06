@@ -1,0 +1,34 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    adsf (1.1.1)
+      rack (>= 1.0.0)
+    builder (3.0.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.3.3)
+    colored (1.2)
+    cri (2.3.0)
+      colored (>= 1.2)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    haml (3.1.6)
+    kramdown (0.13.7)
+    mime-types (1.19)
+    multi_json (1.3.6)
+    nanoc (3.4.0)
+      cri (~> 2.2)
+    rack (1.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  adsf
+  builder
+  coffee-script
+  haml
+  kramdown
+  mime-types
+  nanoc

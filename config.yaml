@@ -15,7 +15,7 @@ output_dir: output
 index_filenames: [ 'index.html' ]
 
 base_url: 'http://hatemogi.com'
-title: 'hatemogi의 웹개발 이야기'
+title: 'hatemogi의 프로그래밍 이야기'
 author_name: 'hatemogi'
 author_uri: '@hatemogi'
 feed_url: 'http://feeds.feedburner.com/hatemogi'

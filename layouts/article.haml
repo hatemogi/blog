@@ -3,7 +3,7 @@
     %a(href="#{@article.identifier}")= @article[:title]
     %small= @article[:created_at]
 = content_for(@article, :body)
-.well
+.article-footer
   - article_url = "http://hatemogi.com#{@article.identifier}"
   .row
     .span1

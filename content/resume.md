@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 이력서
-updated_at: 2012-02-22
+updated_at: 2012-04-09
 ---
 
 ## Profile 
@@ -12,7 +12,7 @@ updated_at: 2012-02-22
 * 하드웨어의 펌웨어 개발부터 스크립팅까지 넘나드는 시스템 엔지니어 
 
 ## Work Experiences
-* 2004.5 ~ 현재 : [Daum](http://info.daum.net/) 기술기획팀, 클라우드TFT겸직
+* 2004.5 ~ 현재 : [Daum](http://info.daum.net/) 클라우드컴퓨팅팀
   * 2009.3 ~ 2009.8 (6개월): 휴직
   * 2006.2 ~ 2007.6 (17개월): Daum 일본지사@Tokyo 파견근무, 시스템팀장 
 * 2000.1 ~ 2003.4 : [한국물류정보통신](http://www.klnet.co.kr/), 시스템엔지니어
@@ -49,6 +49,7 @@ updated_at: 2012-02-22
 {: .table .table-striped}
 
 ## Projects @Daum
+* 2012, VMWare CloudFoundry기반 PaaS 플랫폼 개발중
 * 2011, 사내 개발자용 github 서비스 개발 (Ruby, Sinatra, Redis, Riak, OpenSSH, Git, Bootstrap, Haml, CoffeeScript)
 * 2010, 클라우드 서비스, 파일동기화 프로토콜 설계, 구현 (Rsync, Java)
 * 2010, 마이피플 아키텍쳐 설계, 초기 개발 (Objective-C)

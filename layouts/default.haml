@@ -2,7 +2,7 @@
 %head
   %meta(charset='utf-8')
   %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  %title= (item[:title] && "웹개발의 재미: #{item[:title]}")|| '웹개발의 재미'
+  %title= (item[:title] && "프로그래밍의 재미: #{item[:title]}")|| '프로그래밍의 재미'
   %script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript")
   %script(src="/js/application.js" type="text/javascript")
   %script(src="/js/google-code-prettify/prettify.js" type="text/javascript")
@@ -27,14 +27,14 @@
             %li
               %a(href="/articles/") 글
             %li
-              %a(href="/guestbook/") 방명록
+              %a(href="/about/") 소개
           %ul.nav.pull-right
             %li
               %a(href="http://twitter.com/hatemogi") @hatemogi
             %li
               %a(href="http://blog.hatemogi.com/") 이전블로그
   #fb-root
-  %section#main-content(style="padding-top: 40px;")
+  %section#main-content
     .container
       - if item[:kind] == 'article'
         .row

@@ -1,3 +1,8 @@
-- sorted_articles.each do |a|
+- sorted_articles.first(5).each do |a|
+  - content_for :body do
+    ~ a.compiled_content
   ~ render 'article', :article => a, :width => 500
 
+
+%li
+  %a(href="/articles/") 전체글목록
